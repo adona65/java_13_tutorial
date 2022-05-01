@@ -16,6 +16,16 @@ public class _003_MiscellaneousChanges {
 	 *   - Kerberos (computer-network authentication protocol that works on the basis of tickets to allow nodes communicating over a 
 	 *   	non-secure network to prove their identity to one another in a secure manner.) principal name canonicalization support added, 
 	 *   	cross-realm referrals are supported.
+	 *   - There are new methods to instantiate DOM and SAX factories with Namespace support : newDefaultNSInstance(), 
+	 *      newNSInstance() and newNSInstance(String factoryClassName, ClassLoader classLoader) :
+	 *     
+	        //java 13 onwards
+			DocumentBuilder db = DocumentBuilderFactory.newDefaultNSInstance().newDocumentBuilder(); 
+			
+			// before java 13
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newDefaultInstance(); 
+			dbf.setNamespaceAware(true); 
+			DocumentBuilder db = dbf.newDocumentBuilder();
 	 *   
 	 * Some APIs were also marked for removal. We may see them at : https://cr.openjdk.java.net/~iris/se/13/latestSpec/#APIs-proposed-for-removal
 	 */
