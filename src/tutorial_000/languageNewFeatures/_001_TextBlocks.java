@@ -42,7 +42,8 @@ public class _001_TextBlocks {
 		 * New methods were also added to String for working with Text Blocks :
 		 *   - stripIndent() : used to remove the incidental white space characters from the beginning and end of every line in the text block.
 		 *   	It doesn't modify the indentation inside the content (doesn't replace "\t" tabulations).
-		 *   - translateEscapes() : translate the escape sequences as per the string syntax (as if in a string literal).
+		 *   - translateEscapes() : translate the escape sequences as per the string syntax (as if in a string literal). For example,
+		 *      translates escape sequences such as “\\t” to “\t”
 		 *   - formatted() : similar to String format() method to support formatting in text block strings.
 		 *   
 		 * For example, we may write the previous code snippet like this :
